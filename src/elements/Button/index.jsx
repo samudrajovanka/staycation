@@ -13,7 +13,7 @@ export default function Button(props) {
   if (props.hasShadow) className.push('btn-shadow');
 
   const onCLick = () => {
-    if (props.onclick) props.onCLick();
+    if (props.onClick) props.onClick();
   }
 
   if (props.isDisabled || props.isLoading) {
@@ -74,7 +74,7 @@ export default function Button(props) {
 
 Button.propTypes = {
   type: PropTypes.oneOf(["button", "link"]),
-  onclick: PropTypes.func,
+  onClick: PropTypes.func,
   target: PropTypes.string,
   href: PropTypes.string,
   className: PropTypes.string,
