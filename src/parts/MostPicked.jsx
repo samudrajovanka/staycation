@@ -11,9 +11,9 @@ export default function MostPicked(props) {
             return (
               <div key={`mostpicked-${index}`} className={`item column-4${index === 0 ? ' row-2' : ' row-1'}`}>
                 <div className="card card-featured">
-                  <div className="tag">
+                  <div className="tag" style={{ fontWeight: 600 }}>
                     ${item.price}
-                    <span className="font-weight-light">per {item.unit}</span>
+                    <span className="font-weight-light"> per {item.unit}</span>
                   </div>
 
                   <figure className="img-wrapper">
@@ -28,7 +28,7 @@ export default function MostPicked(props) {
                       type="link"
                       href={`/properties/${item._id}`}
                       className="streched-link d-block text-white">
-                      <h5>{item.nam}</h5>
+                      <h5>{item.name}</h5>
                     </Button>
                     <span>{item.city}, {item.country}</span>
                   </div>
